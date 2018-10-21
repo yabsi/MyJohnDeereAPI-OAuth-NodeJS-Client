@@ -133,7 +133,7 @@ app.get('/callback', function (req, res) {
 
 
 app.get('/fields', function (req, res) {
-    oAuthSession.get('https://sandboxapi.deere.com:443/platform/organizations/223031/fields', 'e857ab85-d146-4d38-b566-7c4e6cff79bd', 'Vng+hvL4t0toSM8kBApJILa4LjgRfEbLDs6Wk1syew6n/OfmxWrRBDThrTGIDAIr5VB3w5uVvV7irvhqo/tpmiPb7x6GJmds9h7XdsZF5no=', function (error, responseData, result) {
+    oAuthSession.get('https://sandboxapi.deere.com:443/platform/organizations/223031/fields;start=0;count=100', 'e857ab85-d146-4d38-b566-7c4e6cff79bd', 'Vng+hvL4t0toSM8kBApJILa4LjgRfEbLDs6Wk1syew6n/OfmxWrRBDThrTGIDAIr5VB3w5uVvV7irvhqo/tpmiPb7x6GJmds9h7XdsZF5no=', function (error, responseData, result) {
         console.log('StatusCode => ' + result.statusCode);
         console.log('----- Sample Request Response -----');
 

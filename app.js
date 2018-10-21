@@ -164,7 +164,7 @@ app.get('/field_operations', function (req, res) {
 
 app.get('/harvest', function (req, res) {
     const operation_id = req.query.operation_id;
-    oAuthSession.get(`https://sandboxapi.deere.com:443/platform/fieldOperations/${operation_id}/measurementTypes/HarvestYieldResult`, 'e857ab85-d146-4d38-b566-7c4e6cff79bd', 'Vng+hvL4t0toSM8kBApJILa4LjgRfEbLDs6Wk1syew6n/OfmxWrRBDThrTGIDAIr5VB3w5uVvV7irvhqo/tpmiPb7x6GJmds9h7XdsZF5no=', function (error, responseData, result) {
+    oAuthSession.get(`https://sandboxapi.deere.com:443/platform/fieldOperations/${operation_id}/measurementTypes/HarvestTrashResult`, 'e857ab85-d146-4d38-b566-7c4e6cff79bd', 'Vng+hvL4t0toSM8kBApJILa4LjgRfEbLDs6Wk1syew6n/OfmxWrRBDThrTGIDAIr5VB3w5uVvV7irvhqo/tpmiPb7x6GJmds9h7XdsZF5no=', function (error, responseData, result) {
         console.log('StatusCode => ' + result.statusCode);
         console.log('----- Sample Request Response -----');
 

@@ -151,6 +151,18 @@ app.get('/field_details', function (req, res) {
     });
 });
 
+
+app.get('/field_operations', function (req, res) {
+    const farm_id = req.query.farm_id;
+    oAuthSession.get(`https://sandboxapi.deere.com:443/platform/organizations/223031/fields/${farm_id}/fieldOperations?fieldOperationType=HARVEST`, 'e857ab85-d146-4d38-b566-7c4e6cff79bd', 'Vng+hvL4t0toSM8kBApJILa4LjgRfEbLDs6Wk1syew6n/OfmxWrRBDThrTGIDAIr5VB3w5uVvV7irvhqo/tpmiPb7x6GJmds9h7XdsZF5no=', function (error, responseData, result) {
+        console.log('StatusCode => ' + result.statusCode);
+        console.log('----- Sample Request Response -----');
+
+        res.send(JSON.stringify(JSON.parse(responseData), null, 2));
+    });
+});
+
+
 app.listen(3000);
 
 console.log('listening on http://localhost:3000');
